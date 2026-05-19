@@ -1,0 +1,58 @@
+.counter_card {
+  padding: 1.2rem 1.3rem;
+  border-radius: 18px;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  box-shadow: var(--shadow);
+  max-width: 320px;
+  margin: 1.5rem auto 0;
+  text-align: center;
+}
+
+.counter_card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-h);
+}
+
+.counter_value {
+  margin: 1rem 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+.counter_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.counter_buttons button {
+  min-width: 4.2rem;
+  padding: 0.55rem 0.9rem;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.95), rgba(255, 183, 0, 0.95));
+  border: none;
+  border-radius: 999px;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.counter_buttons button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.counter_buttons button.secondary {
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text-h);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.counter_buttons button.secondary:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}

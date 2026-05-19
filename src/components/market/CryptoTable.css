@@ -1,0 +1,129 @@
+.crypto_table_wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+}
+
+.crypto_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+
+.crypto_table thead {
+  background: var(--bg-card);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.crypto_table th {
+  padding: 0.75rem 1rem;
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.crypto_table th.col_name,
+.crypto_table th.col_rank {
+  text-align: left;
+}
+
+.crypto_row {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  transition: background var(--transition-fast);
+}
+
+.crypto_row:last-child {
+  border-bottom: none;
+}
+
+.crypto_row:hover {
+  background: var(--bg-hover);
+}
+
+.crypto_table td {
+  padding: 0.7rem 1rem;
+  text-align: right;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.crypto_table td.col_rank,
+.crypto_table td.col_name {
+  text-align: left;
+}
+
+.coin_name {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.coin_icon {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.coin_fullname {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.coin_symbol {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.pct {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-xs);
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.pct_up {
+  color: var(--color-up);
+  background: var(--color-up-bg);
+}
+
+.pct_down {
+  color: var(--color-down);
+  background: var(--color-down-bg);
+}
+
+.pct_neutral {
+  color: var(--text-muted);
+}
+
+.font_mono {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.text_muted {
+  color: var(--text-muted) !important;
+}
+
+.text_secondary {
+  color: var(--text-secondary) !important;
+}
+
+.table_empty {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

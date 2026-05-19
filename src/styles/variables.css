@@ -1,0 +1,93 @@
+:root,
+[data-theme='dark'] {
+  /* Backgrounds */
+  --bg-primary:    #0b1015;
+  --bg-secondary:  #131c21;
+  --bg-card:       #1a2730;
+  --bg-hover:      #1f303b;
+
+  /* Borders */
+  --border-color:  #243340;
+
+  /* Accent */
+  --accent:        #00d97e;
+  --accent-hover:  #00c070;
+  --accent-dim:    rgba(0, 217, 126, 0.12);
+  --gold:          #f0b90b;
+  --gold-hover:    #d9a600;
+
+  /* Semantic colors */
+  --color-up:      #00d97e;
+  --color-down:    #f6465d;
+  --color-up-bg:   rgba(0, 217, 126, 0.1);
+  --color-down-bg: rgba(246, 70, 93, 0.1);
+
+  /* Text */
+  --text-primary:   #e2f0e8;
+  --text-secondary: #7aaa8a;
+  --text-muted:     #3d6650;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.7);
+
+  /* Scrollbar */
+  --scrollbar-track: #131c21;
+  --scrollbar-thumb: #243340;
+}
+
+[data-theme='light'] {
+  /* Backgrounds */
+  --bg-primary:    #f0f7f3;
+  --bg-secondary:  #ffffff;
+  --bg-card:       #ffffff;
+  --bg-hover:      #e8f5ee;
+
+  /* Borders */
+  --border-color:  #c8e0d0;
+
+  /* Accent — same brand colors */
+  --accent:        #008f52;
+  --accent-hover:  #007a46;
+  --accent-dim:    rgba(0, 143, 82, 0.1);
+  --gold:          #c8960a;
+  --gold-hover:    #b08308;
+
+  /* Semantic */
+  --color-up:      #008f52;
+  --color-down:    #e03050;
+  --color-up-bg:   rgba(0, 143, 82, 0.08);
+  --color-down-bg: rgba(224, 48, 80, 0.08);
+
+  /* Text */
+  --text-primary:   #0d2118;
+  --text-secondary: #2d6644;
+  --text-muted:     #7aaa8a;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.14);
+
+  /* Scrollbar */
+  --scrollbar-track: #e8f5ee;
+  --scrollbar-thumb: #c8e0d0;
+}
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --transition-fast: 0.15s ease;
+  --transition:      0.25s ease;
+
+  --header-height:  64px;
+  --sidebar-width:  220px;
+  --content-max:    1400px;
+}
