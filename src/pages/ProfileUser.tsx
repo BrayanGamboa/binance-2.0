@@ -232,21 +232,22 @@ export function ProfileUser() {
 
   return (
     <div className="pf_page">
-      <div className="pf_page_header">
-        <div>
-          <h2 className="pf_page_title">Configuración de perfil</h2>
-          <p className="pf_page_subtitle">Actualiza tu información personal</p>
+      <div className="page_header">
+        <div className='width_full'>
+          <h2 className="page_title">Configuración de perfil</h2>
+          <p className="page_subtitle">Actualiza tu información personal</p>
         </div>
-        {!editMode && (
-          <button
-            type="button"
-            className="pf_btn pf_btn--outline"
-            onClick={handleEdit}
-          >
-            ✏ Editar perfil
-          </button>
-        )}
       </div>
+
+      {!editMode && (
+        <button
+          type="button"
+          className="pf_btn pf_btn--outline"
+          onClick={handleEdit}
+        >
+          ✏ Editar perfil
+        </button>
+      )}
 
       <div className="pf_card">
         <form className="pf_form" onSubmit={handleSubmit(onSubmit)} noValidate>

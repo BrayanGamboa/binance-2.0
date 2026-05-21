@@ -300,10 +300,10 @@ export function UsersPage() {
 
   return (
     <div className="ul_page">
-      <div className="page-header">
-        <div>
-          <h2 className="page-title">Usuarios</h2>
-          <p className="page-subtitle">
+      <div className="page_header">
+        <div className='width_full'>
+          <h2 className="page_title">Usuarios</h2>
+          <p className="page_subtitle">
             {loading
               ? "Cargando…"
               : `${users.length} usuario${users.length !== 1 ? "s" : ""} registrado${users.length !== 1 ? "s" : ""}`}

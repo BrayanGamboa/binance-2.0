@@ -50,7 +50,7 @@ export function DashboardPage() {
   return (
     <div className="dashboard">
       <div className="page_header">
-        <div>
+        <div className='width_full'>
           <h2 className="page_title">Dashboard</h2>
           <p className="page_subtitle">Resumen del mercado de criptomonedas</p>
         </div>

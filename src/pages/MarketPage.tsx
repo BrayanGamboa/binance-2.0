@@ -34,7 +34,7 @@ export function MarketPage() {
   return (
     <div className="market_page">
       <div className="page_header">
-        <div>
+        <div className='width_full'>
           <h2 className="page_title">Mercado</h2>
           <p className="page_subtitle">
             Top {perPage} monedas · Se actualiza cada 5 s
