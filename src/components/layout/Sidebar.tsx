@@ -10,6 +10,8 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { to: '/dashboard', icon: '▦', label: 'Dashboard' },
   { to: '/market', icon: '◈', label: 'Mercado' },
+  { to: '/users', icon: '⇄', label: 'Usuarios' },
+  { to: '/trade', icon: '⇄', label: 'Trading' },
   { to: '/profile', icon: '◉', label: 'Perfil' },
 ];
 

@@ -1,0 +1,417 @@
+.trade_page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
+.trade_layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .trade_layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Panel operación ──────────────────────────────────────── */
+.trade_panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.trade_panel_title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.trade_spinner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.trade_error {
+  color: var(--color-down);
+  font-size: 0.88rem;
+  margin: 0;
+}
+
+/* ── Campos ──────────────────────────────────────────────── */
+.trade_field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.trade_label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.trade_label_hint {
+  font-weight: 400;
+  text-transform: none;
+  color: var(--text-muted);
+  margin-left: 0.3rem;
+}
+
+.trade_select,
+.trade_input {
+  padding: 0.65rem 0.9rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.trade_select:focus,
+.trade_input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+/* ── Info precio ─────────────────────────────────────────── */
+.trade_price_info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 1rem;
+  flex-wrap: wrap;
+}
+
+.trade_coin_icon {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.trade_price_label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0 0 0.2rem;
+}
+
+.trade_price_value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  margin: 0;
+}
+
+.trade_price_sub {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* ── Toggle Compra / Venta ───────────────────────────────── */
+.trade_op_toggle {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.trade_op_btn {
+  flex: 1;
+  padding: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.trade_op_btn:hover {
+  background: var(--bg-hover);
+}
+
+.trade_op_btn.active.trade_op_buy {
+  background: var(--color-up-bg);
+  color: var(--color-up);
+}
+
+.trade_op_btn.active.trade_op_sell {
+  background: var(--color-down-bg);
+  color: var(--color-down);
+}
+
+/* ── Preview ─────────────────────────────────────────────── */
+.trade_preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+}
+
+.trade_preview_label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.trade_preview_value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* ── Feedback ────────────────────────────────────────────── */
+.trade_feedback {
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.trade_feedback_success {
+  background: var(--color-up-bg);
+  border: 1px solid var(--color-up);
+  color: var(--color-up);
+}
+
+.trade_feedback_error {
+  background: var(--color-down-bg);
+  border: 1px solid var(--color-down);
+  color: var(--color-down);
+}
+
+/* ── Botón ejecutar ──────────────────────────────────────── */
+.trade_execute_btn {
+  width: 100%;
+  padding: 0.85rem;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: background var(--transition-fast), opacity var(--transition-fast);
+  letter-spacing: 0.02em;
+}
+
+.trade_execute_btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.trade_execute_btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Sidebar derecho ─────────────────────────────────────── */
+.trade_sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Tarjeta balance ─────────────────────────────────────── */
+.trade_balance_card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.trade_balance_label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.trade_balance_cash {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  margin: 0;
+}
+
+.trade_balance_portfolio {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  margin: 0;
+}
+
+.trade_divider {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 0.75rem 0;
+}
+
+.trade_balance_total {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  margin: 0;
+}
+
+/* ── Holdings ────────────────────────────────────────────── */
+.trade_holdings {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.trade_holdings_title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin: 0 0 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.trade_holdings_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.trade_holding_item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trade_holding_item:last-child {
+  border-bottom: none;
+}
+
+.trade_holding_name {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trade_holding_amount {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+.trade_holding_value {
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+/* ── Historial ───────────────────────────────────────────── */
+.trade_history {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.trade_history_title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+}
+
+.trade_history_wrap {
+  overflow-x: auto;
+}
+
+.trade_history_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.trade_history_table th {
+  text-align: left;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0 0.75rem 0.65rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trade_history_table td {
+  padding: 0.65rem 0.75rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.trade_tx_row:last-child td {
+  border-bottom: none;
+}
+
+.trade_tx_coin {
+  font-weight: 600;
+}
+
+.trade_tx_badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.trade_tx_badge_buy {
+  background: var(--color-up-bg);
+  color: var(--color-up);
+}
+
+.trade_tx_badge_sell {
+  background: var(--color-down-bg);
+  color: var(--color-down);
+}
